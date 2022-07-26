@@ -34,7 +34,7 @@ runs:
         MODULE_PATH: ${{inputs.module_path}}
 
     - run: |
-        module_name=${MODULE_PATH/\//_}
+        module_name=${MODULE_PATH//\//_}
         echo "::set-output name=tag::module_${module_name}_${{inputs.version}}"
       id: get-tag
       shell: bash
