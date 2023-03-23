@@ -18,8 +18,8 @@ jobs:
       tfmigrate_targets: ${{ steps.list-targets.outputs.tfmigrate_targets }}
       terraform_targets: ${{ steps.list-targets.outputs.terraform_targets }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: aquaproj/aqua-installer@v1.0.0
+      - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
+      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
         with:
           aqua_version: v1.17.1
 
@@ -40,15 +40,15 @@ jobs:
       TFACTION_TARGET: ${{matrix.target.target}}
       TFACTION_JOB_TYPE: tfmigrate
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
       - name: Generate token
         id: generate_token
-        uses: tibdex/github-app-token@v1
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # v1
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: aquaproj/aqua-installer@v1.0.0
+      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
         with:
           aqua_version: v1.17.1
 
@@ -85,15 +85,15 @@ jobs:
       TFACTION_TARGET: ${{matrix.target.target}}
       TFACTION_JOB_TYPE: terraform
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
       - name: Generate token
         id: generate_token
-        uses: tibdex/github-app-token@v1
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # v1
         with:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: aquaproj/aqua-installer@v1.0.0
+      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
         with:
           aqua_version: v1.17.1
 
