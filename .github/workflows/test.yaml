@@ -18,7 +18,7 @@ jobs:
       terraform_targets: ${{ steps.list-targets.outputs.terraform_targets }}
     steps:
       - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
-      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
+      - uses: aquaproj/aqua-installer@a39f721a15ed34ccbc85706e6e8ae8572c9ca9c6 # v1.2.0
         with:
           aqua_version: v1.17.1
       - uses: ./list-targets
@@ -46,7 +46,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
+      - uses: aquaproj/aqua-installer@a39f721a15ed34ccbc85706e6e8ae8572c9ca9c6 # v1.2.0
         with:
           aqua_version: v1.17.1
 
@@ -90,7 +90,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - uses: aquaproj/aqua-installer@a34cc75221784a96e3caf4bbf716ff67a160a3f1 # v1.0.0
+      - uses: aquaproj/aqua-installer@a39f721a15ed34ccbc85706e6e8ae8572c9ca9c6 # v1.2.0
         with:
           aqua_version: v1.17.1
 
